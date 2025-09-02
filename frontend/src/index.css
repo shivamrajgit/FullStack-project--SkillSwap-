@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+/* Global dark theme styles */
+body {
+  background-color: #000000;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+#root {
+  background-color: #000000;
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+/* Auto-scrolling animation for explore cards */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scroll-seamless {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-25%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 30s linear infinite;
+}
+
+.animate-scroll-seamless {
+  animation: scroll-seamless 30s linear infinite;
+}
+
+.animate-scroll:hover,
+.animate-scroll-seamless:hover {
+  animation-play-state: paused;
+}
